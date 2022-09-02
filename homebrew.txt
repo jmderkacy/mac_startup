@@ -1,0 +1,35 @@
+Revised: Sept. 2022
+
+Homebrew is a package manager for Macs similar to apt or yum on Linux systems
+It can be obtained here: https://brew.sh/
+
+This guide is a modified version of that produced by Eddie Baron, supplemented
+by official documentation from many sources.
+
+In order to install homebrew, the following prerequisites must be met:
+
+  1. Install Rossetta 2 via:
+  
+    % /usr/sbin/softwareupdate --install-rosetta --agree-to-license
+    
+  2. Install the xcode command line tools via:
+  
+    % xcode-select --install
+
+Following the instructions on the Homebrew site, Homebrew can be installed via:
+  
+  % /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  
+This will prompt you to confirm installation of several Homebrew files. After the installation finishes,
+you will be prompted to run the following commands to add brew to your path
+
+  % echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/USER/.zprofile
+  % eval "$(/opt/homebrew/bin/brew shellenv)"
+  
+From here, we can begin to install additional packages that will be useful to us, including:
+
+  - The GNU compiler suite
+  - TexLive
+  - rsync
+  - cmake
+  - and many more
