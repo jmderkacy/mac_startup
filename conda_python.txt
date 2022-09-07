@@ -1,0 +1,42 @@
+Revised Sept. 2022
+
+Installation notes for conda on M1 MacBook Pro
+
+More information about Anaconda and its python distribution can be found here:
+https://www.anaconda.com/
+
+To install Anaconda on M1 MacBook Pro, follow conda guide at:
+https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html
+
+Once installed, further packages can be installed via pip
+
+It is necessary to create several new conda environments to install specific
+packages, including MISFITS and the JWST reduction pipeline
+
+To create a new environment named ENV with conda execute:
+
+  % conda create --no-default-packages -n ENV python
+  
+To allow newly created environments to be selected for new Jupyter notebooks,
+we must install a few additional packages to our environments. In our base
+environment, install nb_conda_kernels via:
+
+  % conda install nb_conda_kernels
+  
+Then, in each environment you want to appear in the Jupyter drop-down menu,
+install ipykernel via:
+
+  % conda activate ENV
+  % conda install ipykernel
+  
+Note: This method will only work if you install the ipykernel in each new conda
+environment you create. If you cannot install ipykernel becuase of a conflict or
+do not wish to install it in an environment, kernels must be registered via:
+
+  % ipython kernel install --user --name=new-env
+  
+Kernels can be unregistered via:
+
+  % jupyter kernelspec uninstall new-env 
+
+(The above instructions were derived from: https://towardsdatascience.com/get-your-conda-environment-to-show-in-jupyter-notebooks-the-easy-way-17010b76e874)
