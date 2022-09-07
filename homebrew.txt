@@ -33,3 +33,14 @@ From here, we can begin to install additional packages that will be useful to us
   - rsync
   - cmake
   - and many more
+
+  % brew install gcc        #installs GNU compiler suite (needed for C/C++/Fortran codes)
+  % brew install grace      #installs XMGrace plotting software (legacy)
+  % brew install git        #installs full git functionality
+  % brew install git-gui    #installs gitk for visual representation of git file trees
+  % brew install wget       #installs wget command (web retrieval)
+  % brew install sshguard   #installs sshguard to protect against brute force ssh attacks 
+  % brew install rsync      #installs rsync command and functionality (stop/start file transfer)
+  % brew install cmake      #installs cmake library (needed for compiling code with cmake files)
+  % brew install cmake-docs #installs cmake documentation
+  % brew install aspell     #installs GNU aspell spell checker
