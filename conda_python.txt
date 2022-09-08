@@ -8,10 +8,37 @@ https://www.anaconda.com/
 To install Anaconda on M1 MacBook Pro, follow conda guide at:
 https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html
 
-Once installed, further packages can be installed via pip
+Once installed, further packages can be installed via pip. These packages 
+include:
 
-It is necessary to create several new conda environments to install specific
-packages, including MISFITS and the JWST reduction pipeline
+  adstex, astrodash, dust-extinction, extinction, seaborn
+  
+Several other packages will need to me installed locally as they are not
+registered on PyPi. They include:
+
+  python_stuff - Eddie's private python repo
+  spextractor - https://github.com/anthonyburrow/spextractor
+  SNIaDCA - https://github.com/anthonyburrow/SNIaDCA
+  snpy - https://csp.obs.carnegiescience.edu/data/snpy/installing_snoopy2
+  
+For Eddie's python_stuff/ simply clone the git repo to ~/my_python/ and add
+python_stuff to your PATH.
+
+For Anthony's packages (spextractor, SNIaDCA), simply clone the gt repos to
+~/my_python/ and install the packages via
+
+   pip install .
+   
+For snpy, we install via the install script method, which will create snpy in 
+its own environment (installation attempt via pip method failed). Once the 
+install script is downloaded, it is installed via:
+
+  % bash install-snpy snpy
+
+which will create a conda environment named snpy where it is installed.
+
+It is necessary to create several new conda environments to install several
+other specific packages, including MISFITS and the JWST reduction pipeline
 
 To create a new environment named ENV with conda execute:
 
