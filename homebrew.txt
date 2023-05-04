@@ -1,4 +1,4 @@
-Revised: Sept. 2022
+Revised: May 2023
 
 Homebrew is a package manager for Macs similar to apt or yum on Linux systems
 It can be obtained here: https://brew.sh/
@@ -35,6 +35,9 @@ From here, we can begin to install additional packages that will be useful to us
   - and many more
 
   % brew install gcc        #installs GNU compiler suite (needed for C/C++/Fortran codes)
+  % brew install texlive    #installs LaTeX via most recent TexLive installation; contains python dependency
+  % brew install biber      #installs biber, a bibliographic back-end for LaTeX
+  % brew install pandoc     #installs pandoc, a markdown reader and converter
   % brew install grace      #installs XMGrace plotting software (legacy)
   % brew install git        #installs full git functionality
   % brew install git-gui    #installs gitk for visual representation of git file trees
@@ -44,3 +47,11 @@ From here, we can begin to install additional packages that will be useful to us
   % brew install cmake      #installs cmake library (needed for compiling code with cmake files)
   % brew install cmake-docs #installs cmake documentation
   % brew install aspell     #installs GNU aspell spell checker
+  
+  % brew install miniforge  #installs minforge distribution of anaconda; ensures ARM python version
+  
+  Graphical installations are installed using the --cask option
+  
+  % brew install --cask emacs           #installs full emacs software suite
+  % brew install --cask tigervnc-viewer #installs tigervnc-viewer; a requirement for Keck remote observing
+  % brew install --cask xquartz         #installs xquartz; a mac port of the X11 windowing software, needed to view windows from remote machines
