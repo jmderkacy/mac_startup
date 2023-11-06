@@ -1,2 +1,2 @@
 # mac_startup
-Start up notes and docs for M1 Mac
+Start up notes and docs for Apple Silicon Macs
