@@ -14,6 +14,17 @@ distribution, which is itself based on the conda-forge community version of
 Anaconda. Once installed, minforge will operate just like any other Anaconda
 distribution.
 
+After miniforge is installed, you will need to initialize conda via:
+
+  % conda init
+
+If you are using zsh, the command is:
+
+  % conda init zsh
+
+This command adds the necessary lines to your shell's .rc file to use the
+miniforge distribution properly. 
+
 Packages can be installed via pip as normal, including:
 
   numpy, scipy, astropy, matplotlib, jupyter, jupyterlab, pandas, scikit-learn
