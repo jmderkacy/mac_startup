@@ -30,7 +30,7 @@ Packages can be installed via pip as normal, including:
   numpy, scipy, astropy, matplotlib, jupyter, jupyterlab, pandas, scikit-learn
   GPy, adstex, dust-extinction, extinction, seaborn
   
-We also want to install everal useful packages and utilities from outside the 
+We also want to install several useful packages and utilities from outside the 
 pip and conda package managers, many of which we can download from github. 
 They can be found at the following links, and installed via their included
 installation instructions.
@@ -47,25 +47,6 @@ different from the latest release. To avoid the issues, they can be installed
 in their own conda environments. A new conda environment can be created via:
 
   % conda create --no-default-packages -n ENV python
-  
-In order to properly install snpy on an Apple Silicon machine, we must first 
-install a prerequisite and fix one small bug. After downloading snpy from its
-git repo; navigate to the snpy/snpy/spline2/ directory, and install the spline2
-package via:
-
-  % pip install .
-  
-After the spline2 package has successfully installed, return to the git root,
-and navigate to the snpy/snpy/dm15temp/ directory and open the dm15temp_CRB.c
-file. In the block of preprocessor directives (e.g. the "# include" lines) at
-the top of the file, add the following line:
-
-  # include <string.h>
-  
-After saving and exiting the file, you can return to the git root and install
-snpy via:
-
-  % pip install .
 
 To allow newly created environments to be selected for new Jupyter notebooks,
 we must install a few additional packages to our environments. In our base
@@ -90,6 +71,27 @@ Kernels can be unregistered via:
   % jupyter kernelspec uninstall new-env 
 
 (The above instructions were derived from: https://towardsdatascience.com/get-your-conda-environment-to-show-in-jupyter-notebooks-the-easy-way-17010b76e874)
+
+%%%%%%%%%%%%%%%%%%%% SNPY Installation Instructions %%%%%%%%%%%%%%%%%%%%
+  
+In order to properly install snpy on an Apple Silicon machine, we must first 
+install a prerequisite and fix one small bug. After downloading snpy from its
+git repo; navigate to the snpy/snpy/spline2/ directory, and install the spline2
+package via:
+
+  % pip install .
+  
+After the spline2 package has successfully installed, return to the git root,
+and navigate to the snpy/snpy/dm15temp/ directory and open the dm15temp_CRB.c
+file. In the block of preprocessor directives (e.g. the "# include" lines) at
+the top of the file, add the following line:
+
+  # include <string.h>
+  
+After saving and exiting the file, you can return to the git root and install
+snpy via:
+
+  % pip install .
 
 %%%%%%%%%%%%%%%%%%%% LEGACY INSTRUCTIONS (FOR REFERENCE) %%%%%%%%%%%%%%%%%%%%
 
